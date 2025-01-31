@@ -5,7 +5,9 @@ function Search({searchMovie, setSearchMovie}) {
     <div className='search'>
       <img 
       src='./images/search.svg'
-      alt='search'/>
+      alt='search'
+      //className='absolute right-6'
+      />
     <input 
       type='text'
       placeholder='search for a movie'

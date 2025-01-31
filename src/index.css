@@ -85,11 +85,11 @@
     }
 
     & img {
-      @apply absolute left-2 h-5 w-5;
+      @apply absolute right-6 h-5 w-5;  /* Changed right-16 to right-6 */
     }
 
     & input {
-      @apply w-full bg-transparent py-2 sm:pr-10 pl-10 text-base text-gray-200 placeholder-light-200 outline-hidden;
+      @apply w-full bg-transparent py-2 pl-2 pr-12 text-base text-gray-200 placeholder-light-200 outline-hidden;  /* Adjusted pr-24 to pr-12 */
     }
   }
 

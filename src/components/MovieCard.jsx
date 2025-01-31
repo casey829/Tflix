@@ -13,22 +13,22 @@ const MovieCard = ({movie: {
           <h3 className='text-white'>{title}</h3>
       </div>
 
-      <div className='content'>
-        <div className='ratinf'>
-         <img 
-         src='./images/star.svg'
-         alt='Star Icon'
-         />
-         <p className='text-white'>{vote_average ? vote_average.toFixed(1):'N/A' }</p>
-        </div>
-        <span>•</span>
-        <p className='lang'>{original_language}</p>
-
-        <span>•</span>
-        <p className='year text-white '>
-          {release_date ? release_date.split('-')[0] : 'N/A'}
-        </p>
+      <div className='flex items-center space-x-2'>
+      <div className='rating flex items-center'>
+        <img 
+          src='./images/star.svg'
+          alt='Star Icon'
+          className='w-4 h-4'
+        />
+        <p className='text-white ml-1'>{vote_average ? vote_average.toFixed(1) : 'N/A'}</p>
       </div>
+      <span className='text-gray-400'>•</span>
+      <p className='lang text-gray-200'>{original_language}</p>
+      <span className='text-gray-400'>•</span>
+      <p className='year text-white'>
+        {release_date ? release_date.split('-')[0] : 'N/A'}
+      </p>
+    </div>
     </div>
   )
 }

@@ -98,6 +98,7 @@ useEffect(()=> {
       <div className='pattern'/>
       <div className='wrapper'>
         <header>
+          <h1 className='text-blue-300 font-sans md:font-serif ...'>Tflix</h1>
           <img 
             src='./images/hero-img.png'
             alt='Hero banner'
