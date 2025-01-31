@@ -106,7 +106,7 @@ useEffect(()=> {
           <h1>Streamline Your <span className='text-gradient'>Movie</span> Nights—Find Films in a Flash!</h1>
 
           <Search  searchMovie={searchMovie} setSearchMovie={setSearchMovie}/>
-          <h1 className='text-white'>{searchMovie}</h1>
+          
         </header>
        {trendingMovies.length > 0 &&(
         <section className='trending'>

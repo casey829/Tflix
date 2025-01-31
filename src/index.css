@@ -58,14 +58,16 @@
   }
 
   .trending {
-    @apply mt-20;
+    @apply mt-20 w-full overflow-hidden;
 
     & ul {
-      @apply flex flex-row overflow-y-auto gap-5 -mt-10 w-full hide-scrollbar;
+      @apply flex flex-row overflow-x-auto gap-5 -mt-10 w-full hide-scrollbar;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
     }
 
     & ul li {
-      @apply min-w-[230px] flex flex-row items-center;
+      @apply min-w-[230px] flex flex-row items-center flex-shrink-0;
     }
 
     & ul li p {
@@ -75,7 +77,17 @@
     & ul li img {
       @apply w-[127px] h-[163px] rounded-lg object-cover -ml-3.5;
     }
-  }
+}
+
+/* If you don't already have this custom class for hiding scrollbar */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
 
   .search {
     @apply w-full bg-light-100/5 px-4 py-3 rounded-lg mt-10 max-w-3xl mx-auto;
